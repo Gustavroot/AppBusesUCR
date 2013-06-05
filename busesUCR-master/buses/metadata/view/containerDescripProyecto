@@ -1,0 +1,48 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "containerDescripProyecto",
+        "designer|userClassName": "containerDescripProyecto",
+        "designer|userAlias": "mycontainer",
+        "layout": "fit"
+    },
+    "designerId": "2bb8e010-936f-40a9-a885-ada7ca02308b",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Sobre este proyecto"
+            },
+            "designerId": "5f6da045-e3a6-4b7c-aa23-bcc26b0a810c"
+        },
+        {
+            "type": "Ext.Panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "80%",
+                "html": "<center><font color=\"gray\"><p style=\"font-size: 150%;\">Información general</p><p>&nbsp</p><p style=\"font-size: 100%;\">Bla fasdfadsf fr erj flerj lfej rlfj erlfherl helr fhelrh elr lekr hflerhflekrhf lerh fklerhflke hrlfherl hflehrlfhe rlfh elrh flerhlfherlh felrh flerhflehrlf ehrhelrh felrhflehrfeh rlfh erlfh elrhferlhferklh fekrlh klerhfkl erhflkeh rfklrhe flehrfleh rlkerhfklerhkleh rfl</p></font></center>",
+                "left": "10%",
+                "top": "10%",
+                "width": "80%",
+                "modal": true,
+                "scrollable": "vertical"
+            },
+            "designerId": "48f489aa-92c9-4ed2-86c9-e986095f6c9f"
+        }
+    ]
+}

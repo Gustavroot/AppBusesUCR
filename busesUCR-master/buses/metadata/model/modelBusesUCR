@@ -1,0 +1,74 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelBusesUCR"
+    },
+    "designerId": "5fe17ef2-ad8d-4303-9eb1-9382b33fa735",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "idBus"
+            },
+            "designerId": "2d68006b-77ff-48cd-8b5a-4031385ef105"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "idReg"
+            },
+            "designerId": "1dbf856f-f7a5-4847-bc19-30e029faec45"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Latitude"
+            },
+            "designerId": "fc973ed0-e78b-4e2f-8006-6f1943d2997e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Longitude"
+            },
+            "designerId": "2b61a533-541e-4a10-83f7-aa6a4a699381"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "DateTime"
+            },
+            "designerId": "e1b60b06-f5a2-4ec9-acd4-6fda5476dc43"
+        }
+    ]
+}

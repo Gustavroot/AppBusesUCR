@@ -1,0 +1,114 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "tabPanelPrincipal",
+        "designer|userClassName": "tabPanelPrincipal",
+        "designer|initialView": true
+    },
+    "designerId": "d04a97f0-ea46-49ad-b854-0c8e3042d3ff",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "designerId": "d6b44ee0-c686-4c08-999e-00aa56944734"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onTabpanelActiveItemChange",
+                "implHandler": [
+                    "if(value==Ext.getCmp('containerMapaPrinc')){",
+                    "    Ext.getStore('storeBusesUCR').load(function(records){",
+                    "        MyApp.app.loadDelStoreBusesUCR(records);",
+                    "    });",
+                    "    MyApp.app.funcionEjecRefreshBg();",
+                    "}",
+                    "if(oldValue==Ext.getCmp('containerMapaPrinc')){",
+                    "    try{",
+                    "        clearTimeout(varTimeoutEjecRefreshBg);",
+                    "    }",
+                    "    catch(e){}",
+                    "}",
+                    "if(oldValue==Ext.getCmp('containerEleccionPines')){",
+                    "    clearTimeout(variableTimeOutRefreshDespliegueInfo);",
+                    "}"
+                ],
+                "name": "activeitemchange"
+            },
+            "designerId": "9e027d65-ad17-48f6-a238-73f9b594896a"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Acerca de",
+                "iconCls": "bookmarks"
+            },
+            "designerId": "5a6310e1-75da-49b9-a429-75e86fc08b36",
+            "masterInstanceId": "2bb8e010-936f-40a9-a885-ada7ca02308b"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Info",
+                "iconCls": "info"
+            },
+            "designerId": "44d83e2e-6af7-454c-a11a-8f3318a244ae",
+            "masterInstanceId": "2705db91-e7f1-460c-a8f0-3721ccb3577d"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Mapa",
+                "iconCls": "maps"
+            },
+            "designerId": "91824ba3-72ab-4d54-8676-36617f8c8533",
+            "masterInstanceId": "9caaeeae-7691-4566-9457-c31faa249000"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "hidden": true,
+                "iconCls": "info"
+            },
+            "designerId": "5c426da9-8a29-4077-88d2-03c8859cd880",
+            "masterInstanceId": "247c740f-c19f-443c-a9dd-dd278986564c"
+        }
+    ]
+}

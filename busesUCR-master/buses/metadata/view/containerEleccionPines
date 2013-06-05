@@ -1,0 +1,78 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "containerEleccionPines",
+        "designer|userClassName": "containerEleccionPines",
+        "designer|userAlias": "mycontainer3",
+        "layout": "fit"
+    },
+    "designerId": "247c740f-c19f-443c-a9dd-dd278986564c",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Marcar pin"
+            },
+            "designerId": "8ad67d3c-eea5-4b60-b450-a4a508acf1bb",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "right": "3%",
+                        "width": "20%",
+                        "text": "Atrás"
+                    },
+                    "designerId": "f45f82f5-bee6-4afa-9347-f20f9d9f3c99",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp('tabPanelPrincipal').setActiveItem(Ext.getCmp('containerInfo'));",
+                                    "Ext.getCmp('tabPanelPrincipal').getTabBar().setHidden(0);"
+                                ]
+                            },
+                            "designerId": "d19501a9-c2ee-4f3e-85bf-5c0458915170"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "4eabb13a-8a86-4eb2-9986-bf4a7e2da5c2",
+            "masterInstanceId": "6691bd17-86d6-4949-afb5-5fcfa1690c61"
+        }
+    ]
+}

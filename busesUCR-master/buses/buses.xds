@@ -1,0 +1,182 @@
+{
+    "name": "buses",
+    "settings": {
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "",
+        "exportPath": "",
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.2",
+    "xdsBuild": 991,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "d04a97f0-ea46-49ad-b854-0c8e3042d3ff": {
+            "paths": [
+                "metadata/view/tabPanelPrincipal",
+                "app/view/override/tabPanelPrincipal.js",
+                "app/view/tabPanelPrincipal.js"
+            ],
+            "className": "tabPanelPrincipal"
+        },
+        "2705db91-e7f1-460c-a8f0-3721ccb3577d": {
+            "paths": [
+                "metadata/view/containerInfo",
+                "app/view/override/containerInfo.js",
+                "app/view/containerInfo.js"
+            ],
+            "className": "containerInfo"
+        },
+        "d8157a21-7817-40ab-ae68-e4974ce8974a": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "163ae345-16e2-41a3-8649-187162f2dddb": {
+            "paths": [
+                "metadata/store/storeBusesUCR",
+                "app/store/override/storeBusesUCR.js",
+                "app/store/storeBusesUCR.js"
+            ],
+            "className": "storeBusesUCR"
+        },
+        "5fe17ef2-ad8d-4303-9eb1-9382b33fa735": {
+            "paths": [
+                "metadata/model/modelBusesUCR",
+                "app/model/override/modelBusesUCR.js",
+                "app/model/modelBusesUCR.js"
+            ],
+            "className": "modelBusesUCR"
+        },
+        "2bb8e010-936f-40a9-a885-ada7ca02308b": {
+            "paths": [
+                "metadata/view/containerDescripProyecto",
+                "app/view/override/containerDescripProyecto.js",
+                "app/view/containerDescripProyecto.js"
+            ],
+            "className": "containerDescripProyecto"
+        },
+        "9caaeeae-7691-4566-9457-c31faa249000": {
+            "paths": [
+                "metadata/view/containerMapaPrinc",
+                "app/view/override/containerMapaPrinc.js",
+                "app/view/containerMapaPrinc.js"
+            ],
+            "className": "containerMapaPrinc"
+        },
+        "516505d0-cbc2-4d23-8619-6c85f1961015": {
+            "paths": [
+                "metadata/resource/GoogleMapsAPI1"
+            ],
+            "className": "GoogleMapsAPI1"
+        },
+        "3025358e-ebaa-4e93-af04-b90bb956b954": {
+            "paths": [
+                "metadata/store/storePinesParadas",
+                "app/store/override/storePinesParadas.js",
+                "app/store/storePinesParadas.js"
+            ],
+            "className": "storePinesParadas"
+        },
+        "75e44e1c-fc80-4c76-8ba6-45408a9133a2": {
+            "paths": [
+                "metadata/model/modelPinesParadas",
+                "app/model/override/modelPinesParadas.js",
+                "app/model/modelPinesParadas.js"
+            ],
+            "className": "modelPinesParadas"
+        },
+        "7aa12b71-1bcc-4972-b1d3-453ec81d322a": {
+            "paths": [
+                "metadata/view/mapaDesplieguePines",
+                "app/view/override/mapaDesplieguePines.js",
+                "app/view/mapaDesplieguePines.js"
+            ],
+            "className": "mapaDesplieguePines"
+        },
+        "247c740f-c19f-443c-a9dd-dd278986564c": {
+            "paths": [
+                "metadata/view/containerEleccionPines",
+                "app/view/override/containerEleccionPines.js",
+                "app/view/containerEleccionPines.js"
+            ],
+            "className": "containerEleccionPines"
+        },
+        "6691bd17-86d6-4949-afb5-5fcfa1690c61": {
+            "paths": [
+                "metadata/view/mapaEleccionPines",
+                "app/view/override/mapaEleccionPines.js",
+                "app/view/mapaEleccionPines.js"
+            ],
+            "className": "mapaEleccionPines"
+        },
+        "1feb3725-2ca4-454f-ae80-0fbd5cb3eae6": {
+            "paths": [
+                "metadata/store/storeDespliegueInfo",
+                "app/store/override/storeDespliegueInfo.js",
+                "app/store/storeDespliegueInfo.js"
+            ],
+            "className": "storeDespliegueInfo"
+        },
+        "f8fc480d-53c1-4496-8bfe-4c3e5049898e": {
+            "paths": [
+                "metadata/model/modelDespliegueInfo",
+                "app/model/override/modelDespliegueInfo.js",
+                "app/model/modelDespliegueInfo.js"
+            ],
+            "className": "modelDespliegueInfo"
+        },
+        "97467f63-5113-434c-baa0-4ad5428f0b1d": {
+            "paths": [
+                "metadata/model/modelDespliegueInfoBuses",
+                "app/model/override/modelDespliegueInfoBuses.js",
+                "app/model/modelDespliegueInfoBuses.js"
+            ],
+            "className": "modelDespliegueInfoBuses"
+        },
+        "b73e37b1-b462-4d05-9f8e-17a3d9083325": {
+            "paths": [
+                "metadata/store/storeDespliegueInfoBuses",
+                "app/store/override/storeDespliegueInfoBuses.js",
+                "app/store/storeDespliegueInfoBuses.js"
+            ],
+            "className": "storeDespliegueInfoBuses"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "d04a97f0-ea46-49ad-b854-0c8e3042d3ff",
+            "2bb8e010-936f-40a9-a885-ada7ca02308b",
+            "2705db91-e7f1-460c-a8f0-3721ccb3577d",
+            "9caaeeae-7691-4566-9457-c31faa249000",
+            "7aa12b71-1bcc-4972-b1d3-453ec81d322a",
+            "247c740f-c19f-443c-a9dd-dd278986564c",
+            "6691bd17-86d6-4949-afb5-5fcfa1690c61"
+        ],
+        "store": [
+            "163ae345-16e2-41a3-8649-187162f2dddb",
+            "3025358e-ebaa-4e93-af04-b90bb956b954",
+            "1feb3725-2ca4-454f-ae80-0fbd5cb3eae6",
+            "b73e37b1-b462-4d05-9f8e-17a3d9083325"
+        ],
+        "controller": [],
+        "model": [
+            "5fe17ef2-ad8d-4303-9eb1-9382b33fa735",
+            "75e44e1c-fc80-4c76-8ba6-45408a9133a2",
+            "f8fc480d-53c1-4496-8bfe-4c3e5049898e",
+            "97467f63-5113-434c-baa0-4ad5428f0b1d"
+        ],
+        "resource": [
+            "d8157a21-7817-40ab-ae68-e4974ce8974a",
+            "516505d0-cbc2-4d23-8619-6c85f1961015"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

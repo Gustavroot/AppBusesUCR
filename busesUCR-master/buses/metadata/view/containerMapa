@@ -1,0 +1,79 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "containerMapa",
+        "designer|userClassName": "containerMapa",
+        "designer|userAlias": "mycontainer",
+        "layout": "fit"
+    },
+    "designerId": "78a70229-a669-41fc-bc47-546e3a4ebb08",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Mapa"
+            },
+            "designerId": "cd87df87-ab9b-41e4-a4f8-0f759c656ad5"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "e64c2768-eb4b-41e0-8a1f-514fc91a61bc",
+            "masterInstanceId": "c943e668-c89a-4417-8ad8-60a21a0d1646"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();",
+                    "",
+                    "Ext.Function.defer(this.initMapa,100,this);"
+                ]
+            },
+            "designerId": "0533c7e3-b8c8-4cd5-9e2d-01a3a56a3e41"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initMapa",
+                "implHandler": [
+                    "var mapPanel = this.down('map');",
+                    "var gMap = mapPanel.getMap();",
+                    "",
+                    "if (gMap === null) {",
+                    "   Ext.Function.defer(this.initMap,250,this);",
+                    "} else {",
+                    "     // ready to start calling google map methods",
+                    "}"
+                ]
+            },
+            "designerId": "e8b3fb4a-42ed-4282-8945-24f48c2c6eb5"
+        }
+    ]
+}

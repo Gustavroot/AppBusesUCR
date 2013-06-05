@@ -1,0 +1,43 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "model": "modelDespliegueInfo",
+        "storeId": "storeDespliegueInfo",
+        "designer|userClassName": "storeDespliegueInfo"
+    },
+    "designerId": "1feb3725-2ca4-454f-ae80-0fbd5cb3eae6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://faraday.eie.ucr.ac.cr/map/php/json_stop_info.php"
+            },
+            "designerId": "fd8529bf-0673-42bb-882a-e707ad5c663f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "Faraday"
+                    },
+                    "designerId": "f8712d43-899c-417d-8cfd-6d3d1cf7a45c"
+                }
+            ]
+        }
+    ]
+}

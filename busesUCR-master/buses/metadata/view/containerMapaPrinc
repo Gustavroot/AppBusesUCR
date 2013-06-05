@@ -1,0 +1,78 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "containerMapaPrinc",
+        "designer|userClassName": "containerMapaPrinc",
+        "designer|userAlias": "mycontainer1",
+        "layout": "fit"
+    },
+    "designerId": "9caaeeae-7691-4566-9457-c31faa249000",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Mapa"
+            },
+            "designerId": "6238737c-0f37-4b52-9b31-1bac8317da3f",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": "20%",
+                        "iconCls": "refresh",
+                        "text": null
+                    },
+                    "designerId": "d019b06a-50c7-49a5-8ee5-59fe82922d84",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "Ext.getCmp('mapaDesplieguePines').getMap().fitBounds(limitesPinesParadas);",
+                                    "Ext.getStore('storeBusesUCR').load();"
+                                ]
+                            },
+                            "designerId": "f04545fc-91b7-44df-9d6a-1fd247ee39e7"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "9d6acedb-fac7-4351-80fc-3cf2ea37573c",
+            "masterInstanceId": "7aa12b71-1bcc-4972-b1d3-453ec81d322a"
+        }
+    ]
+}

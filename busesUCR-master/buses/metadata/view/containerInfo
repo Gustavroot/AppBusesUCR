@@ -1,0 +1,222 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "containerInfo",
+        "designer|userClassName": "containerInfo",
+        "designer|userAlias": "mycontainer11",
+        "layout": "fit"
+    },
+    "designerId": "2705db91-e7f1-460c-a8f0-3721ccb3577d",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Información"
+            },
+            "designerId": "9ca5cb13-dc7e-4227-b02e-a4a82d461e52",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "right": "3%",
+                        "ui": null,
+                        "width": "18%",
+                        "iconCls": "refresh",
+                        "text": null
+                    },
+                    "designerId": "f9db7e9e-70a8-422b-a4a5-2283912e8f46",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "//Ext.getCmp('listaDespliegueInfo').removeAll();"
+                                ]
+                            },
+                            "designerId": "df96e496-eb67-4375-8f9e-767975e415da"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<center><font color=\"#29088A\"><p>&nbsp</p><p>Despliegue por</p></font></center>",
+                "width": "49%"
+            },
+            "designerId": "3982309e-4a44-48ac-be35-c5a25d4094c9",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "10%",
+                        "left": "15%",
+                        "top": "35%",
+                        "width": "70%",
+                        "text": "Paradas"
+                    },
+                    "designerId": "06d1ac8f-8584-4033-9930-c4e4ba724cf7",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "MyApp.app.ejectBotonesDespliegue('parada');"
+                                ]
+                            },
+                            "designerId": "ef38fa30-1271-45ad-84a8-f6cc2d88ac48"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "10%",
+                        "left": "15%",
+                        "top": "55%",
+                        "width": "70%",
+                        "text": "Buses"
+                    },
+                    "designerId": "9d2f802a-8195-45b3-a00f-24866f00877b",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "handler",
+                                "designer|params": [
+                                    "button",
+                                    "event"
+                                ],
+                                "implHandler": [
+                                    "MyApp.app.ejectBotonesDespliegue('bus');"
+                                ]
+                            },
+                            "designerId": "ce003737-9659-4bce-8ded-355ef54a2575"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "left": "49.8%",
+                "style": "background-color: black",
+                "width": "0.4%"
+            },
+            "designerId": "3fbbf5f4-15bb-457a-a17d-0620df3440ab"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": "100%",
+                "left": "50.2%",
+                "width": "49.8%",
+                "layout": "fit"
+            },
+            "designerId": "ba099005-2f92-41ed-8c00-6116616def57",
+            "cn": [
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "listaDespliegueInfo",
+                        "emptyText": "Vacío",
+                        "loadingText": "Cargando...",
+                        "store": "storeDespliegueInfo"
+                    },
+                    "designerId": "4d9a79d5-696f-4d6e-b0ee-02ce113aff66",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "implHandler": [
+                                    "{Time} {Distance}"
+                                ],
+                                "designer|displayName": "itemTpl"
+                            },
+                            "designerId": "4a03bdce-964d-4fe0-864b-010efcc62d11"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

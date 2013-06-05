@@ -1,0 +1,37 @@
+{
+    "type": "Ext.Map",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "mapaDesplieguePines",
+        "designer|userClassName": "mapaDesplieguePines",
+        "designer|userAlias": "mymap1"
+    },
+    "designerId": "7aa12b71-1bcc-4972-b1d3-453ec81d322a",
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMapaDesplieguePinesMaprender",
+                "implHandler": [
+                    "this.setMasked({xtype: \"loadmask\", message: \"Espere por favor...\"});",
+                    "setTimeout(function(){Ext.getCmp('mapaDesplieguePines').setMasked(false);},1500);",
+                    "Ext.getStore('storePinesParadas').load(function(records){",
+                    "    MyApp.app.loadStorePinesParadas(records);",
+                    "});",
+                    "MyApp.app.refrescadoPinesParadas();"
+                ],
+                "name": "maprender"
+            },
+            "designerId": "f0a871b6-c65e-4a1c-a533-2d817fafd93f"
+        }
+    ]
+}

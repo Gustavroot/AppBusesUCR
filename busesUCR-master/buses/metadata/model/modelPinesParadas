@@ -1,0 +1,50 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "modelPinesParadas"
+    },
+    "designerId": "75e44e1c-fc80-4c76-8ba6-45408a9133a2",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Name"
+            },
+            "designerId": "4c002c9b-9391-486a-9b55-fa34402b005a"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Latitude"
+            },
+            "designerId": "5a6e805d-04e3-4898-9f96-ac24afadf2fc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Longitude"
+            },
+            "designerId": "5efeb640-8448-496a-b9c5-2f1119baa8f2"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "model": "modelBusesUCR",
+        "storeId": "storeBusesUCR",
+        "designer|userClassName": "storeBusesUCR"
+    },
+    "designerId": "163ae345-16e2-41a3-8649-187162f2dddb",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "http://faraday.eie.ucr.ac.cr/map/php/json_bus_markers.php",
+                "autoAppendParams": false
+            },
+            "designerId": "c5f7893e-2d01-4d65-8c55-8e1e810779dd",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "idProperty": "idBus",
+                        "rootProperty": "Faraday"
+                    },
+                    "designerId": "de9d15fe-0443-43b2-83b6-e1388dd4ac11"
+                }
+            ]
+        }
+    ]
+}

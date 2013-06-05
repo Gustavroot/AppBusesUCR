@@ -1,0 +1,39 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "containerMapa",
+        "designer|userClassName": "MyContainer",
+        "designer|userAlias": "mycontainer",
+        "layout": "fit"
+    },
+    "designerId": "78a70229-a669-41fc-bc47-546e3a4ebb08",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "Mapa"
+            },
+            "designerId": "cd87df87-ab9b-41e4-a4f8-0f759c656ad5"
+        },
+        {
+            "type": "Ext.Map",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "44572ba3-674e-4672-9e63-13c53082e6ce"
+        }
+    ]
+}

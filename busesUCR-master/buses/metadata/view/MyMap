@@ -1,0 +1,13 @@
+{
+    "type": "Ext.Map",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyMap",
+        "designer|userAlias": "mymap"
+    },
+    "designerId": "4d7aa485-dd61-48c5-875b-33daba780812"
+}
