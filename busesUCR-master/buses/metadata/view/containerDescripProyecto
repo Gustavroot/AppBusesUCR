@@ -35,7 +35,7 @@
             "codeClass": null,
             "userConfig": {
                 "height": "80%",
-                "html": "<center><font color=\"gray\"><p style=\"font-size: 150%;\">Información general</p><p>&nbsp</p><p style=\"font-size: 100%;\">Bla fasdfadsf fr erj flerj lfej rlfj erlfherl helr fhelrh elr lekr hflerhflekrhf lerh fklerhflke hrlfherl hflehrlfhe rlfh elrh flerhlfherlh felrh flerhflehrlf ehrhelrh felrhflehrfeh rlfh erlfh elrhferlhferklh fekrlh klerhfkl erhflkeh rfklrhe flehrfleh rlkerhfklerhkleh rfl</p></font></center>",
+                "html": "<font color=\"gray\"><center><p style=\"font-size: 150%;\">Información general</p></center><p>&nbsp</p><p style=\"font-size:100%;\"><p align=\"justify\">Este proyecto surge como una iniciativa de la Escuela de Ingeniería Eléctrica de la Universidad de Costa Rica para ofrecer al usuario del transporte interno de la Sede Rodrigo Facio un servicio de geolocalización de buses en tiempo real.</p><p>Los creadores son:</p><p>Prototipo: <b>André Govinda Stahl Leitón</b></p><p>Aplicación: <b>Gustavo Hidalgo Ramírez</b></p><p>Profesor Guía: <b>Ing. Fabián Abarca Calderón</b></p></p></font>",
                 "left": "10%",
                 "top": "10%",
                 "width": "80%",

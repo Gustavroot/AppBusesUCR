@@ -88,7 +88,7 @@
                     "userConfig": {
                         "height": "10%",
                         "left": "15%",
-                        "top": "50%",
+                        "top": "60%",
                         "width": "70%",
                         "text": "Paradas"
                     },
@@ -160,11 +160,11 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": "24%",
+                        "height": "30%",
                         "id": "panelInfoDespuesClickear",
-                        "left": "15%",
+                        "left": "5%",
                         "top": "16%",
-                        "width": "70%"
+                        "width": "90%"
                     },
                     "designerId": "3e9e4d45-2e9a-4d49-b169-14f48fe43d2b"
                 }

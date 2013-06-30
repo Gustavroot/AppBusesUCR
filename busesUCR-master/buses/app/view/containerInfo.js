@@ -51,7 +51,7 @@ Ext.define('MyApp.view.containerInfo', {
                         },
                         height: '10%',
                         left: '15%',
-                        top: '50%',
+                        top: '60%',
                         width: '70%',
                         text: 'Paradas'
                     },
@@ -68,11 +68,11 @@ Ext.define('MyApp.view.containerInfo', {
                     },
                     {
                         xtype: 'panel',
-                        height: '24%',
+                        height: '30%',
                         id: 'panelInfoDespuesClickear',
-                        left: '15%',
+                        left: '5%',
                         top: '16%',
-                        width: '70%'
+                        width: '90%'
                     }
                 ]
             },

@@ -252,8 +252,8 @@ Ext.application({
                     //alert('esta es una parada con identificador: '+identificador);
                     Ext.getStore('storeDespliegueInfo').getProxy().setExtraParam('busstopname',identificador);
                     Ext.getStore('storeDespliegueInfo').load(function(records){
-                        Ext.getCmp('panelInfoDespuesClickear').setHtml('<b><p>&nbsp;</p><p>&nbsp;&nbsp;&nbsp;Parada seleccionada:</p><p>&nbsp;</p><center><p style="font-size:200%;">'+identificador+'</p></center></b>');
-                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>Bus {Name}</b>  &#9658;  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
+                        Ext.getCmp('panelInfoDespuesClickear').setHtml('<center><b><p>&nbsp;</p><p>Parada:</p><p>'+identificador+'</p></b></center>');
+                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>Bus {Name}</b>  >  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
                     });
                 }
                 else{
@@ -275,8 +275,8 @@ Ext.application({
                     //alert('este es un bus con identificador: '+identificador);
                     Ext.getStore('storeDespliegueInfoBuses').getProxy().setExtraParam('idbus',identificador);
                     Ext.getStore('storeDespliegueInfoBuses').load(function(){
-                        Ext.getCmp('panelInfoDespuesClickear').setHtml('<b><p>&nbsp;</p><p>&nbsp;&nbsp;&nbsp;Bus seleccionado:</p><p>&nbsp;</p><center><p style="font-size:200%;">'+identificador+'</p></center></b>');
-                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>{Name}</b>  &#9658;  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
+                        Ext.getCmp('panelInfoDespuesClickear').setHtml('<center><b><p>&nbsp;</p><p>Bus: '+identificador+'</p></b></center>');
+                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>{Name}</b>  >  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
                     });
                 }
             }
