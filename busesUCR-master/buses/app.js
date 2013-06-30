@@ -259,7 +259,7 @@ Ext.application({
                     Ext.getStore('storeDespliegueInfo').getProxy().setExtraParam('busstopname',identificador);
                     Ext.getStore('storeDespliegueInfo').load(function(records){
                         Ext.getCmp('panelInfoDespuesClickear').setHtml('<center><b><p>&nbsp;</p><p>Parada:</p><p>'+identificador+'</p></b></center>');
-                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>Bus {Name}</b>  >  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
+                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>Bus {Name}</b>  >  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {[MyApp.app.parseTime(values.Time)]}');
                         Ext.getCmp('containerInfo').setMasked(false);
                     });
                 }
@@ -283,7 +283,7 @@ Ext.application({
                     Ext.getStore('storeDespliegueInfoBuses').getProxy().setExtraParam('idbus',identificador);
                     Ext.getStore('storeDespliegueInfoBuses').load(function(){
                         Ext.getCmp('panelInfoDespuesClickear').setHtml('<center><b><p>&nbsp;</p><p>Bus: '+identificador+'</p></b></center>');
-                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>{Name}</b>  >  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
+                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>{Name}</b>  >  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {[MyApp.app.parseTime(values.Time)]}');
                         Ext.getCmp('containerInfo').setMasked(false);
                     });
                 }
@@ -332,6 +332,12 @@ Ext.application({
             });
             MyApp.app.refrescadoPinesDespliegueInfo();
         },1500);
+    },
+
+    parseTime: function(time) {
+        //alert(time);
+        //alert(time.split(":")[0]+" h "+time.split(":")[1]+" min");
+        return time.split(":")[0]+" h "+time.split(":")[1]+" min";
     }
 
 });
