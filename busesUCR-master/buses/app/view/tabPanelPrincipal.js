@@ -60,6 +60,7 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
 
     onTabpanelActiveItemChange: function(container, value, oldValue, eOpts) {
         if(value==Ext.getCmp('containerMapaPrinc')){
+            Ext.getCmp('containerMapaPrinc').setMasked(false);
             Ext.getStore('storeBusesUCR').load(function(records){
                 MyApp.app.loadDelStoreBusesUCR(records);
                 MyApp.app.funcionEjecRefreshBg();
@@ -90,6 +91,7 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
 
         if(oldValue==Ext.getCmp('containerInfo')){
             clearTimeout(variableTimeOutBuffer);
+
         }
     }
 

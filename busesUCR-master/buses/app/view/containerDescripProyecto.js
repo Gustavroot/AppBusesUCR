@@ -26,7 +26,7 @@ Ext.define('MyApp.view.containerDescripProyecto', {
             {
                 xtype: 'toolbar',
                 docked: 'top',
-                title: 'Sobre este proyecto'
+                title: 'Buses UCR'
             },
             {
                 xtype: 'panel',

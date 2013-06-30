@@ -15,7 +15,7 @@
 
 Ext.define('MyApp.view.mapaDesplieguePines', {
     extend: 'Ext.Map',
-    alias: 'widget.mymap1',
+    alias: 'widget.mapadesplieguepines1',
 
     config: {
         id: 'mapaDesplieguePines',
@@ -28,12 +28,12 @@ Ext.define('MyApp.view.mapaDesplieguePines', {
     },
 
     onMapaDesplieguePinesMaprender: function(map, gmap, eOpts) {
-        this.setMasked({xtype: "loadmask", message: "Espere por favor..."});
+        Ext.getCmp('mapaDesplieguePines').setMasked({xtype: "loadmask", message: "Espere por favor..."});
         setTimeout(function(){Ext.getCmp('mapaDesplieguePines').setMasked(false);},1500);
         Ext.getStore('storePinesParadas').load(function(records){
             MyApp.app.loadStorePinesParadas(records);
         });
-        MyApp.app.refrescadoPinesParadas();
+        //MyApp.app.refrescadoPinesParadas();
 
         //RUTAS
         var ruta1= new google.maps.KmlLayer('http://faraday.eie.ucr.ac.cr/map/kml/route_1.kml');

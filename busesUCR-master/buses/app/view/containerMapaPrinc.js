@@ -44,9 +44,19 @@ Ext.define('MyApp.view.containerMapaPrinc', {
                 ]
             },
             {
-                xtype: 'mymap1'
+                xtype: 'mapadesplieguepines1'
+            }
+        ],
+        listeners: [
+            {
+                fn: 'onContainerMapaPrincInitialize',
+                event: 'initialize'
             }
         ]
+    },
+
+    onContainerMapaPrincInitialize: function(component, eOpts) {
+        this.setMasked({xtype: "loadmask", message: "Espere por favor..."});
     }
 
 });

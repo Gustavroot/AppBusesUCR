@@ -36,9 +36,9 @@ Ext.application({
         'containerInfo',
         'containerDescripProyecto',
         'containerMapaPrinc',
-        'mapaDesplieguePines',
         'containerEleccionPines',
-        'mapaEleccionPines'
+        'mapaEleccionPines',
+        'mapaDesplieguePines'
     ],
     name: 'MyApp',
 
@@ -73,6 +73,7 @@ Ext.application({
         catch(e){}
         if(boundsObject==markersPinesBuses){
             markersPinesBuses.push(marker);
+            marker.setZIndex(google.maps.Marker.MAX_ZINDEX+1);
         }
 
         var infoWindow = new google.maps.InfoWindow();
@@ -103,7 +104,8 @@ Ext.application({
                 MyApp.app.loadDelStoreBusesUCR(records);
                 MyApp.app.funcionEjecRefreshBg();
             });
-        },2500);
+            Ext.getCmp('containerMapaPrinc').setMasked(false);
+        },1000);
         Ext.create('MyApp.view.tabPanelPrincipal', {fullscreen: true});
     },
 
@@ -231,6 +233,9 @@ Ext.application({
         if(tipoPin=='parada'){
             Ext.getCmp(idMap).getMap().fitBounds(limitesPinesEleccion);
         }
+        else{
+            marker.setZIndex(google.maps.Marker.MAX_ZINDEX+1);
+        }
 
         //AQUI SE LE APLICA LA PRIORIDAD A LOS PINES EN EL MAPA
 
@@ -244,6 +249,7 @@ Ext.application({
 
         var infoWindow = new google.maps.InfoWindow();
         google.maps.event.addListener(marker, "click", function() {
+            Ext.getCmp('containerInfo').setMasked({xtype: "loadmask", message: "Espere por favor..."});
             if(target=='parada'){
                 Ext.getCmp('listaDespliegueInfo').setStore(Ext.getStore('storeDespliegueInfo'));
                 if(tipoPin=='parada'){
@@ -254,6 +260,7 @@ Ext.application({
                     Ext.getStore('storeDespliegueInfo').load(function(records){
                         Ext.getCmp('panelInfoDespuesClickear').setHtml('<center><b><p>&nbsp;</p><p>Parada:</p><p>'+identificador+'</p></b></center>');
                         Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>Bus {Name}</b>  >  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
+                        Ext.getCmp('containerInfo').setMasked(false);
                     });
                 }
                 else{
@@ -277,6 +284,7 @@ Ext.application({
                     Ext.getStore('storeDespliegueInfoBuses').load(function(){
                         Ext.getCmp('panelInfoDespuesClickear').setHtml('<center><b><p>&nbsp;</p><p>Bus: '+identificador+'</p></b></center>');
                         Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>{Name}</b>  >  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
+                        Ext.getCmp('containerInfo').setMasked(false);
                     });
                 }
             }
@@ -306,9 +314,11 @@ Ext.application({
         Ext.getStore('storeBusesUCR').load(function(records){
             MyApp.app.load2DelStoreBusesUCR(records,target);
             MyApp.app.refrescadoPinesDespliegueInfo(arrayMarkersDiplayInfo2,records);
+            Ext.getCmp('containerEleccionPines').setMasked(false);
         });
         Ext.getStore('storePinesParadas').load(function(records){
             MyApp.app.load2StorePinesParadas(records,target);
+            Ext.getCmp('containerEleccionPines').setMasked(false);
         });
     },
 

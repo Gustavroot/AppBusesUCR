@@ -85,14 +85,6 @@
             ],
             "className": "modelPinesParadas"
         },
-        "7aa12b71-1bcc-4972-b1d3-453ec81d322a": {
-            "paths": [
-                "metadata/view/mapaDesplieguePines",
-                "app/view/override/mapaDesplieguePines.js",
-                "app/view/mapaDesplieguePines.js"
-            ],
-            "className": "mapaDesplieguePines"
-        },
         "247c740f-c19f-443c-a9dd-dd278986564c": {
             "paths": [
                 "metadata/view/containerEleccionPines",
@@ -170,6 +162,14 @@
                 "metadata/resource/GoogleMapsAPI"
             ],
             "className": "GoogleMapsAPI"
+        },
+        "c7d62128-a33f-4dbf-bce3-d00aa2f5a9a3": {
+            "paths": [
+                "metadata/view/mapaDesplieguePines",
+                "app/view/override/mapaDesplieguePines.js",
+                "app/view/mapaDesplieguePines.js"
+            ],
+            "className": "mapaDesplieguePines"
         }
     },
     "viewOrderMap": {
@@ -181,9 +181,9 @@
             "2bb8e010-936f-40a9-a885-ada7ca02308b",
             "2705db91-e7f1-460c-a8f0-3721ccb3577d",
             "9caaeeae-7691-4566-9457-c31faa249000",
-            "7aa12b71-1bcc-4972-b1d3-453ec81d322a",
             "247c740f-c19f-443c-a9dd-dd278986564c",
-            "6691bd17-86d6-4949-afb5-5fcfa1690c61"
+            "6691bd17-86d6-4949-afb5-5fcfa1690c61",
+            "c7d62128-a33f-4dbf-bce3-d00aa2f5a9a3"
         ],
         "store": [
             "163ae345-16e2-41a3-8649-187162f2dddb",

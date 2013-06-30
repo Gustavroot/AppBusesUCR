@@ -37,7 +37,7 @@
                         "right": "3%",
                         "ui": null,
                         "width": "18%",
-                        "iconCls": "refresh",
+                        "iconCls": "delete",
                         "text": null
                     },
                     "designerId": "f9db7e9e-70a8-422b-a4a5-2283912e8f46",
@@ -56,7 +56,11 @@
                                     "event"
                                 ],
                                 "implHandler": [
-                                    "//Ext.getCmp('listaDespliegueInfo').removeAll();"
+                                    "//Ext.getCmp('listaDespliegueInfo').removeAll();",
+                                    "",
+                                    "clearTimeout(variableTimeOutBuffer);",
+                                    "Ext.getCmp('listaDespliegueInfo').setStore(null);",
+                                    "Ext.getCmp('panelInfoDespuesClickear').setHtml('');"
                                 ]
                             },
                             "designerId": "df96e496-eb67-4375-8f9e-767975e415da"
@@ -108,6 +112,15 @@
                                     "event"
                                 ],
                                 "implHandler": [
+                                    "Ext.getCmp('containerEleccionPines').setMasked({xtype: \"loadmask\", message: \"Espere por favor...\"});",
+                                    "try{",
+                                    "    Ext.getCmp('listaDespliegueInfo').getStore().removeAll();",
+                                    "}",
+                                    "catch(e){}",
+                                    "Ext.getCmp('listaDespliegueInfo').setItemTpl('');",
+                                    "Ext.getCmp('listaDespliegueInfo').setStore(null);",
+                                    "Ext.getCmp('panelInfoDespuesClickear').setHtml('');",
+                                    "",
                                     "MyApp.app.ejectBotonesDespliegue('parada');"
                                 ]
                             },
@@ -145,6 +158,15 @@
                                     "event"
                                 ],
                                 "implHandler": [
+                                    "Ext.getCmp('containerEleccionPines').setMasked({xtype: \"loadmask\", message: \"Espere por favor...\"});",
+                                    "try{",
+                                    "    Ext.getCmp('listaDespliegueInfo').getStore().removeAll();",
+                                    "}",
+                                    "catch(e){}",
+                                    "Ext.getCmp('listaDespliegueInfo').setItemTpl('');",
+                                    "Ext.getCmp('listaDespliegueInfo').setStore(null);",
+                                    "Ext.getCmp('panelInfoDespuesClickear').setHtml('');",
+                                    "",
                                     "MyApp.app.ejectBotonesDespliegue('bus');"
                                 ]
                             },
@@ -209,28 +231,11 @@
                     "codeClass": null,
                     "userConfig": {
                         "id": "listaDespliegueInfo",
-                        "emptyText": "Vacío",
+                        "emptyText": null,
                         "loadingText": "Cargando...",
                         "store": null
                     },
-                    "designerId": "4d9a79d5-696f-4d6e-b0ee-02ce113aff66",
-                    "cn": [
-                        {
-                            "type": "Ext.XTemplate",
-                            "reference": {
-                                "name": "itemTpl",
-                                "type": "object"
-                            },
-                            "codeClass": null,
-                            "userConfig": {
-                                "implHandler": [
-                                    "{Time} {Distance}"
-                                ],
-                                "designer|displayName": "itemTpl"
-                            },
-                            "designerId": "4a03bdce-964d-4fe0-864b-010efcc62d11"
-                        }
-                    ]
+                    "designerId": "4d9a79d5-696f-4d6e-b0ee-02ce113aff66"
                 }
             ]
         }

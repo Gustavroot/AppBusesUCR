@@ -32,10 +32,14 @@ Ext.define('MyApp.view.containerInfo', {
                         xtype: 'button',
                         handler: function(button, event) {
                             //Ext.getCmp('listaDespliegueInfo').removeAll();
+
+                            clearTimeout(variableTimeOutBuffer);
+                            Ext.getCmp('listaDespliegueInfo').setStore(null);
+                            Ext.getCmp('panelInfoDespuesClickear').setHtml('');
                         },
                         right: '3%',
                         width: '18%',
-                        iconCls: 'refresh'
+                        iconCls: 'delete'
                     }
                 ]
             },
@@ -47,6 +51,15 @@ Ext.define('MyApp.view.containerInfo', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
+                            Ext.getCmp('containerEleccionPines').setMasked({xtype: "loadmask", message: "Espere por favor..."});
+                            try{
+                                Ext.getCmp('listaDespliegueInfo').getStore().removeAll();
+                            }
+                            catch(e){}
+                            Ext.getCmp('listaDespliegueInfo').setItemTpl('');
+                            Ext.getCmp('listaDespliegueInfo').setStore(null);
+                            Ext.getCmp('panelInfoDespuesClickear').setHtml('');
+
                             MyApp.app.ejectBotonesDespliegue('parada');
                         },
                         height: '10%',
@@ -58,6 +71,15 @@ Ext.define('MyApp.view.containerInfo', {
                     {
                         xtype: 'button',
                         handler: function(button, event) {
+                            Ext.getCmp('containerEleccionPines').setMasked({xtype: "loadmask", message: "Espere por favor..."});
+                            try{
+                                Ext.getCmp('listaDespliegueInfo').getStore().removeAll();
+                            }
+                            catch(e){}
+                            Ext.getCmp('listaDespliegueInfo').setItemTpl('');
+                            Ext.getCmp('listaDespliegueInfo').setStore(null);
+                            Ext.getCmp('panelInfoDespuesClickear').setHtml('');
+
                             MyApp.app.ejectBotonesDespliegue('bus');
                         },
                         height: '10%',
@@ -95,10 +117,6 @@ Ext.define('MyApp.view.containerInfo', {
                     {
                         xtype: 'list',
                         id: 'listaDespliegueInfo',
-                        emptyText: 'Vacío',
-                        itemTpl: [
-                            '{Time} {Distance}'
-                        ],
                         loadingText: 'Cargando...'
                     }
                 ]

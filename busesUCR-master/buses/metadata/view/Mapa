@@ -10,29 +10,5 @@
         "designer|userClassName": "Mapa",
         "designer|userAlias": "mymap"
     },
-    "designerId": "c943e668-c89a-4417-8ad8-60a21a0d1646",
-    "cn": [
-        {
-            "type": "fixedfunction",
-            "reference": {
-                "name": "items",
-                "type": "array"
-            },
-            "codeClass": null,
-            "userConfig": {
-                "fn": "initialize",
-                "implHandler": [
-                    "var gMap = this.getMap();",
-                    "",
-                    "var marker = new google.maps.Marker({",
-                    "    map: gMap,",
-                    "    animation: google.maps.Animation.DROP,",
-                    "    position: new google.maps.LatLng (9.941530,-84.046738),",
-                    "    icon: 'resources/images/icon.png'",
-                    "});"
-                ]
-            },
-            "designerId": "4aa55fa4-e300-45cd-b686-788ff887987d"
-        }
-    ]
+    "designerId": "c943e668-c89a-4417-8ad8-60a21a0d1646"
 }

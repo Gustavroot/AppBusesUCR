@@ -8,9 +8,9 @@
     "userConfig": {
         "id": "mapaDesplieguePines",
         "designer|userClassName": "mapaDesplieguePines",
-        "designer|userAlias": "mymap1"
+        "designer|userAlias": "mapadesplieguepines1"
     },
-    "designerId": "7aa12b71-1bcc-4972-b1d3-453ec81d322a",
+    "designerId": "c7d62128-a33f-4dbf-bce3-d00aa2f5a9a3",
     "cn": [
         {
             "type": "basiceventbinding",
@@ -22,12 +22,12 @@
             "userConfig": {
                 "fn": "onMapaDesplieguePinesMaprender",
                 "implHandler": [
-                    "this.setMasked({xtype: \"loadmask\", message: \"Espere por favor...\"});",
+                    "Ext.getCmp('mapaDesplieguePines').setMasked({xtype: \"loadmask\", message: \"Espere por favor...\"});",
                     "setTimeout(function(){Ext.getCmp('mapaDesplieguePines').setMasked(false);},1500);",
                     "Ext.getStore('storePinesParadas').load(function(records){",
                     "    MyApp.app.loadStorePinesParadas(records);",
                     "});",
-                    "MyApp.app.refrescadoPinesParadas();",
+                    "//MyApp.app.refrescadoPinesParadas();",
                     "",
                     "//RUTAS",
                     "var ruta1= new google.maps.KmlLayer('http://faraday.eie.ucr.ac.cr/map/kml/route_1.kml');",
@@ -38,7 +38,7 @@
                 ],
                 "name": "maprender"
             },
-            "designerId": "f0a871b6-c65e-4a1c-a533-2d817fafd93f"
+            "designerId": "df72a0d2-3f22-455c-a6c8-97377122be2c"
         }
     ]
 }

@@ -17,41 +17,10 @@ Ext.define('MyApp.view.containerMapa', {
     extend: 'Ext.Container',
     alias: 'widget.mycontainer',
 
-    requires: [
-        'MyApp.view.Mapa'
-    ],
-
     config: {
         id: 'containerMapa',
         layout: {
             type: 'fit'
-        },
-        items: [
-            {
-                xtype: 'titlebar',
-                docked: 'top',
-                title: 'Mapa'
-            },
-            {
-                xtype: 'mymap'
-            }
-        ]
-    },
-
-    initialize: function() {
-        this.callParent();
-
-        Ext.Function.defer(this.initMapa,100,this);
-    },
-
-    initMapa: function() {
-        var mapPanel = this.down('map');
-        var gMap = mapPanel.getMap();
-
-        if (gMap === null) {
-            Ext.Function.defer(this.initMap,250,this);
-        } else {
-            // ready to start calling google map methods
         }
     }
 

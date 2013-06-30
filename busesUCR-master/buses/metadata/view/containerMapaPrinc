@@ -65,14 +65,30 @@
             ]
         },
         {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onContainerMapaPrincInitialize",
+                "implHandler": [
+                    "this.setMasked({xtype: \"loadmask\", message: \"Espere por favor...\"});"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "748098dc-e634-42ef-b890-56ab1b898436"
+        },
+        {
             "type": "linkedinstance",
             "reference": {
                 "name": "items",
                 "type": "array"
             },
             "codeClass": null,
-            "designerId": "9d6acedb-fac7-4351-80fc-3cf2ea37573c",
-            "masterInstanceId": "7aa12b71-1bcc-4972-b1d3-453ec81d322a"
+            "designerId": "8f1d74b8-de87-4c74-ae69-e782e8aaad1f",
+            "masterInstanceId": "c7d62128-a33f-4dbf-bce3-d00aa2f5a9a3"
         }
     ]
 }

@@ -18,17 +18,6 @@ Ext.define('MyApp.view.Mapa', {
     alias: 'widget.mymap',
 
     config: {
-    },
-
-    initialize: function() {
-        var gMap = this.getMap();
-
-        var marker = new google.maps.Marker({
-            map: gMap,
-            animation: google.maps.Animation.DROP,
-            position: new google.maps.LatLng (9.941530,-84.046738),
-            icon: 'resources/images/icon.png'
-        });
     }
 
 });
