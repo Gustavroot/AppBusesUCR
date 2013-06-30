@@ -30,7 +30,7 @@ Ext.define('MyApp.view.containerDescripProyecto', {
                 items: [
                     {
                         xtype: 'container',
-                        height: '80%',
+                        height: '35px',
                         html: '<img src="eieLogo.png" height="100%" width="100%" />',
                         left: '2%',
                         top: '10%',
@@ -38,7 +38,7 @@ Ext.define('MyApp.view.containerDescripProyecto', {
                     },
                     {
                         xtype: 'container',
-                        height: '100%',
+                        height: '40px',
                         html: '<img src="ucrLogo.png" height="100%" width="100%" />',
                         right: '2%',
                         width: '24%'
