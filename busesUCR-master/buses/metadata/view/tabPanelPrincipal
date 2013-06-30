@@ -37,8 +37,9 @@
                     "if(value==Ext.getCmp('containerMapaPrinc')){",
                     "    Ext.getStore('storeBusesUCR').load(function(records){",
                     "        MyApp.app.loadDelStoreBusesUCR(records);",
+                    "        MyApp.app.funcionEjecRefreshBg();",
                     "    });",
-                    "    MyApp.app.funcionEjecRefreshBg();",
+                    "    //MyApp.app.funcionEjecRefreshBg();",
                     "}",
                     "if(oldValue==Ext.getCmp('containerMapaPrinc')){",
                     "    try{",
@@ -48,6 +49,22 @@
                     "}",
                     "if(oldValue==Ext.getCmp('containerEleccionPines')){",
                     "    clearTimeout(variableTimeOutRefreshDespliegueInfo);",
+                    "}",
+                    "",
+                    "if(value==Ext.getCmp('containerInfo')){",
+                    "    var funcionReloadStoreListaInfo=function(){",
+                    "        variableTimeOutBuffer=setTimeout(function(){",
+                    "            if(Ext.getCmp('listaDespliegueInfo').getStore()!==null){",
+                    "                Ext.getCmp('listaDespliegueInfo').getStore().load();",
+                    "            }",
+                    "            funcionReloadStoreListaInfo();",
+                    "        },5000);",
+                    "    };",
+                    "    funcionReloadStoreListaInfo();",
+                    "}",
+                    "",
+                    "if(oldValue==Ext.getCmp('containerInfo')){",
+                    "    clearTimeout(variableTimeOutBuffer);",
                     "}"
                 ],
                 "name": "activeitemchange"
@@ -62,11 +79,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Acerca de",
-                "iconCls": "bookmarks"
+                "title": "Mapa",
+                "iconCls": "maps"
             },
-            "designerId": "5a6310e1-75da-49b9-a429-75e86fc08b36",
-            "masterInstanceId": "2bb8e010-936f-40a9-a885-ada7ca02308b"
+            "designerId": "91824ba3-72ab-4d54-8676-36617f8c8533",
+            "masterInstanceId": "9caaeeae-7691-4566-9457-c31faa249000"
         },
         {
             "type": "linkedinstance",
@@ -90,11 +107,11 @@
             },
             "codeClass": null,
             "userConfig": {
-                "title": "Mapa",
-                "iconCls": "maps"
+                "title": "Acerca de",
+                "iconCls": "bookmarks"
             },
-            "designerId": "91824ba3-72ab-4d54-8676-36617f8c8533",
-            "masterInstanceId": "9caaeeae-7691-4566-9457-c31faa249000"
+            "designerId": "5a6310e1-75da-49b9-a429-75e86fc08b36",
+            "masterInstanceId": "2bb8e010-936f-40a9-a885-ada7ca02308b"
         },
         {
             "type": "linkedinstance",

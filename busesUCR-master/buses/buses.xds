@@ -69,12 +69,6 @@
             ],
             "className": "containerMapaPrinc"
         },
-        "516505d0-cbc2-4d23-8619-6c85f1961015": {
-            "paths": [
-                "metadata/resource/GoogleMapsAPI1"
-            ],
-            "className": "GoogleMapsAPI1"
-        },
         "3025358e-ebaa-4e93-af04-b90bb956b954": {
             "paths": [
                 "metadata/store/storePinesParadas",
@@ -146,10 +140,43 @@
                 "app/store/storeDespliegueInfoBuses.js"
             ],
             "className": "storeDespliegueInfoBuses"
+        },
+        "78a70229-a669-41fc-bc47-546e3a4ebb08": {
+            "paths": [
+                "metadata/view/containerMapa",
+                "app/view/override/containerMapa.js",
+                "app/view/containerMapa.js"
+            ],
+            "className": "containerMapa"
+        },
+        "4d7aa485-dd61-48c5-875b-33daba780812": {
+            "paths": [
+                "metadata/view/MyMap",
+                "app/view/override/MyMap.js",
+                "app/view/MyMap.js"
+            ],
+            "className": "MyMap"
+        },
+        "c943e668-c89a-4417-8ad8-60a21a0d1646": {
+            "paths": [
+                "metadata/view/Mapa",
+                "app/view/override/Mapa.js",
+                "app/view/Mapa.js"
+            ],
+            "className": "Mapa"
+        },
+        "843e21b2-9f56-475d-8b6b-46e294bd0083": {
+            "paths": [
+                "metadata/resource/GoogleMapsAPI"
+            ],
+            "className": "GoogleMapsAPI"
         }
     },
     "viewOrderMap": {
         "view": [
+            "78a70229-a669-41fc-bc47-546e3a4ebb08",
+            "4d7aa485-dd61-48c5-875b-33daba780812",
+            "c943e668-c89a-4417-8ad8-60a21a0d1646",
             "d04a97f0-ea46-49ad-b854-0c8e3042d3ff",
             "2bb8e010-936f-40a9-a885-ada7ca02308b",
             "2705db91-e7f1-460c-a8f0-3721ccb3577d",
@@ -172,8 +199,8 @@
             "97467f63-5113-434c-baa0-4ad5428f0b1d"
         ],
         "resource": [
-            "d8157a21-7817-40ab-ae68-e4974ce8974a",
-            "516505d0-cbc2-4d23-8619-6c85f1961015"
+            "843e21b2-9f56-475d-8b6b-46e294bd0083",
+            "d8157a21-7817-40ab-ae68-e4974ce8974a"
         ],
         "app": [
             "application"

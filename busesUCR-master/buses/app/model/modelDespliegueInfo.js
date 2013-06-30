@@ -19,7 +19,7 @@ Ext.define('MyApp.model.modelDespliegueInfo', {
     config: {
         fields: [
             {
-                name: 'idBus'
+                name: 'Name'
             },
             {
                 name: 'Time'

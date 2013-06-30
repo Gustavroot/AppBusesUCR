@@ -17,9 +17,9 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
     extend: 'Ext.tab.Panel',
 
     requires: [
-        'MyApp.view.containerDescripProyecto',
-        'MyApp.view.containerInfo',
         'MyApp.view.containerMapaPrinc',
+        'MyApp.view.containerInfo',
+        'MyApp.view.containerDescripProyecto',
         'MyApp.view.containerEleccionPines'
     ],
 
@@ -36,9 +36,9 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
         ],
         items: [
             {
-                xtype: 'mycontainer',
-                title: 'Acerca de',
-                iconCls: 'bookmarks'
+                xtype: 'mycontainer1',
+                title: 'Mapa',
+                iconCls: 'maps'
             },
             {
                 xtype: 'mycontainer11',
@@ -46,9 +46,9 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
                 iconCls: 'info'
             },
             {
-                xtype: 'mycontainer1',
-                title: 'Mapa',
-                iconCls: 'maps'
+                xtype: 'mycontainer',
+                title: 'Acerca de',
+                iconCls: 'bookmarks'
             },
             {
                 xtype: 'mycontainer3',
@@ -62,8 +62,9 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
         if(value==Ext.getCmp('containerMapaPrinc')){
             Ext.getStore('storeBusesUCR').load(function(records){
                 MyApp.app.loadDelStoreBusesUCR(records);
+                MyApp.app.funcionEjecRefreshBg();
             });
-            MyApp.app.funcionEjecRefreshBg();
+            //MyApp.app.funcionEjecRefreshBg();
         }
         if(oldValue==Ext.getCmp('containerMapaPrinc')){
             try{
@@ -73,6 +74,22 @@ Ext.define('MyApp.view.tabPanelPrincipal', {
         }
         if(oldValue==Ext.getCmp('containerEleccionPines')){
             clearTimeout(variableTimeOutRefreshDespliegueInfo);
+        }
+
+        if(value==Ext.getCmp('containerInfo')){
+            var funcionReloadStoreListaInfo=function(){
+                variableTimeOutBuffer=setTimeout(function(){
+                    if(Ext.getCmp('listaDespliegueInfo').getStore()!==null){
+                        Ext.getCmp('listaDespliegueInfo').getStore().load();
+                    }
+                    funcionReloadStoreListaInfo();
+                },5000);
+            };
+            funcionReloadStoreListaInfo();
+        }
+
+        if(oldValue==Ext.getCmp('containerInfo')){
+            clearTimeout(variableTimeOutBuffer);
         }
     }
 

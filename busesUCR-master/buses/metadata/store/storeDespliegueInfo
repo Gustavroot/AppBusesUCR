@@ -6,7 +6,6 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": true,
         "model": "modelDespliegueInfo",
         "storeId": "storeDespliegueInfo",
         "designer|userClassName": "storeDespliegueInfo"
@@ -38,6 +37,18 @@
                     "designerId": "f8712d43-899c-417d-8cfd-6d3d1cf7a45c"
                 }
             ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "Distance"
+            },
+            "designerId": "d35cd581-556e-4f87-9978-1ca8876b820f"
         }
     ]
 }

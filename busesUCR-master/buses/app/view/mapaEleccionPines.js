@@ -30,6 +30,12 @@ Ext.define('MyApp.view.mapaEleccionPines', {
     onMapaEleccionPinesMaprender: function(map, gmap, eOpts) {
         this.setMasked({xtype: "loadmask", message: "Espere por favor..."});
         setTimeout(function(){Ext.getCmp('mapaEleccionPines').setMasked(false);},1500);
+
+        var ruta1= new google.maps.KmlLayer('http://faraday.eie.ucr.ac.cr/map/kml/route_1.kml');
+        var ruta2= new google.maps.KmlLayer('http://faraday.eie.ucr.ac.cr/map/kml/route_2.kml');
+
+        ruta1.setMap(Ext.getCmp('mapaEleccionPines').getMap());
+        ruta2.setMap(Ext.getCmp('mapaEleccionPines').getMap());
     }
 
 });

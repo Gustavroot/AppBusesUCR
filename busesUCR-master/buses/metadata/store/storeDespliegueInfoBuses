@@ -20,7 +20,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "url": "http://faraday.eie.ucr.ac.cr/map/php/json_stop_info.php"
+                "url": "http://faraday.eie.ucr.ac.cr/map/php/json_bus_info.php"
             },
             "designerId": "d69ffaf1-3417-44de-b9b9-43f4a3b47a1e",
             "cn": [
@@ -37,6 +37,18 @@
                     "designerId": "88ca3097-55ef-4551-8679-b17122a02262"
                 }
             ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "Distance"
+            },
+            "designerId": "807c2901-b881-4dbf-b76f-67ee5e327aea"
         }
     ]
 }

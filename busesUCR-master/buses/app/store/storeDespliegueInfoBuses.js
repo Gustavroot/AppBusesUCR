@@ -25,11 +25,14 @@ Ext.define('MyApp.store.storeDespliegueInfoBuses', {
         storeId: 'storeDespliegueInfoBuses',
         proxy: {
             type: 'jsonp',
-            url: 'http://faraday.eie.ucr.ac.cr/map/php/json_stop_info.php',
+            url: 'http://faraday.eie.ucr.ac.cr/map/php/json_bus_info.php',
             reader: {
                 type: 'json',
                 rootProperty: 'Faraday'
             }
+        },
+        sorters: {
+            property: 'Distance'
         }
     }
 });

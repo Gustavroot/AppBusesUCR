@@ -88,7 +88,7 @@
                     "userConfig": {
                         "height": "10%",
                         "left": "15%",
-                        "top": "35%",
+                        "top": "50%",
                         "width": "70%",
                         "text": "Paradas"
                     },
@@ -125,7 +125,7 @@
                     "userConfig": {
                         "height": "10%",
                         "left": "15%",
-                        "top": "55%",
+                        "top": "75%",
                         "width": "70%",
                         "text": "Buses"
                     },
@@ -151,6 +151,22 @@
                             "designerId": "ce003737-9659-4bce-8ded-355ef54a2575"
                         }
                     ]
+                },
+                {
+                    "type": "Ext.Panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": "24%",
+                        "id": "panelInfoDespuesClickear",
+                        "left": "15%",
+                        "top": "16%",
+                        "width": "70%"
+                    },
+                    "designerId": "3e9e4d45-2e9a-4d49-b169-14f48fe43d2b"
                 }
             ]
         },
@@ -195,7 +211,7 @@
                         "id": "listaDespliegueInfo",
                         "emptyText": "Vacío",
                         "loadingText": "Cargando...",
-                        "store": "storeDespliegueInfo"
+                        "store": null
                     },
                     "designerId": "4d9a79d5-696f-4d6e-b0ee-02ce113aff66",
                     "cn": [

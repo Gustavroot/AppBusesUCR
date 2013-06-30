@@ -32,6 +32,9 @@ Ext.define('MyApp.model.modelBusesUCR', {
             },
             {
                 name: 'DateTime'
+            },
+            {
+                name: 'State'
             }
         ]
     }

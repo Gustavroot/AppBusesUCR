@@ -6,7 +6,8 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|userClassName": "Library"
+        "designer|userClassName": "Library",
+        "theme": null
     },
     "designerId": "d8157a21-7817-40ab-ae68-e4974ce8974a"
 }

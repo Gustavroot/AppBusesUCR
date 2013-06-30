@@ -51,7 +51,7 @@ Ext.define('MyApp.view.containerInfo', {
                         },
                         height: '10%',
                         left: '15%',
-                        top: '35%',
+                        top: '50%',
                         width: '70%',
                         text: 'Paradas'
                     },
@@ -62,9 +62,17 @@ Ext.define('MyApp.view.containerInfo', {
                         },
                         height: '10%',
                         left: '15%',
-                        top: '55%',
+                        top: '75%',
                         width: '70%',
                         text: 'Buses'
+                    },
+                    {
+                        xtype: 'panel',
+                        height: '24%',
+                        id: 'panelInfoDespuesClickear',
+                        left: '15%',
+                        top: '16%',
+                        width: '70%'
                     }
                 ]
             },
@@ -91,8 +99,7 @@ Ext.define('MyApp.view.containerInfo', {
                         itemTpl: [
                             '{Time} {Distance}'
                         ],
-                        loadingText: 'Cargando...',
-                        store: 'storeDespliegueInfo'
+                        loadingText: 'Cargando...'
                     }
                 ]
             }

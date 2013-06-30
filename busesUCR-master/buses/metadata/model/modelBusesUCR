@@ -69,6 +69,18 @@
                 "name": "DateTime"
             },
             "designerId": "e1b60b06-f5a2-4ec9-acd4-6fda5476dc43"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "State"
+            },
+            "designerId": "5e34a429-1b6f-4a46-a3cc-2606be6d885f"
         }
     ]
 }

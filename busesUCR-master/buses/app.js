@@ -96,12 +96,20 @@ Ext.application({
         arrayMarkersDiplayInfo2=[];
         limitesPinesEleccion = new google.maps.LatLngBounds();
         limitesPinesBuses = new google.maps.LatLngBounds();
+
+        setTimeout(function(){
+            Ext.getCmp('listaDespliegueInfo').setLoadingText(null);
+            Ext.getStore('storeBusesUCR').load(function(records){
+                MyApp.app.loadDelStoreBusesUCR(records);
+                MyApp.app.funcionEjecRefreshBg();
+            });
+        },2500);
         Ext.create('MyApp.view.tabPanelPrincipal', {fullscreen: true});
     },
 
     funcionEjecRefreshBg: function() {
         varTimeoutEjecRefreshBg=setTimeout(function(){
-            Ext.getStore('storeBusesUCR').load(function(store,records){
+            Ext.getStore('storeBusesUCR').load(function(records){
                 MyApp.app.loadDelStoreBusesUCR(records);
             });
             MyApp.app.funcionEjecRefreshBg();
@@ -112,6 +120,20 @@ Ext.application({
         for(var i=0; i<arrayMarkers.length; i++){
             var point = new google.maps.LatLng(recordsStore[i].get('Latitude'),recordsStore[i].get('Longitude'));
             arrayMarkers[i].setPosition(point);
+            if(recordsStore[i].get('State')===0){
+                var iconUrlBuffer='busGreen.png';
+            }
+            else if(recordsStore[i].get('State')===1){
+                var iconUrlBuffer='busBlue.png';
+            }
+            else if(recordsStore[i].get('State')==2){
+                var iconUrlBuffer='busRed.png';
+            }
+            else{
+                var iconUrlBuffer='busGreen.png';
+            }
+            var iconoBusRefresh=new google.maps.MarkerImage(iconUrlBuffer,null,null,null,new google.maps.Size(35,35));
+            arrayMarkers[i].setIcon(iconoBusRefresh);
         }
     },
 
@@ -127,8 +149,20 @@ Ext.application({
     loadDelStoreBusesUCR: function(records) {
         if(markersPinesBuses.length===0){
             for(var i=0; i<records.length; i++){
-                var j=i+1;
-                MyApp.app.insertarPinEnMapa(records[i].get('Latitude'),records[i].get('Longitude'),'mapaDesplieguePines',"Bus "+j,markersPinesBuses,'bus.png');
+                if(records[i].get('State')===0){
+                    var iconUrlBuffer='busGreen.png';
+                }
+                else if(records[i].get('State')===1){
+                    var iconUrlBuffer='busBlue.png';
+                }
+                else if(records[i].get('State')==2){
+                    var iconUrlBuffer='busRed.png';
+                }
+                else{
+                    var iconUrlBuffer='busGreen.png';
+                }
+                MyApp.app.insertarPinEnMapa(records[i].get('Latitude'),records[i].get('Longitude'),'mapaDesplieguePines',"Bus "+records[i].get('idBus'),markersPinesBuses,iconUrlBuffer);
+                //MyApp.app.refrescadoPosMarkers(markersPinesBuses,records);
             }
         }
         else{
@@ -154,10 +188,32 @@ Ext.application({
     },
 
     insertarPinesEleccionDisplay: function(lat, lng, idMap, iconURL, tipoPin, identificador, target, stringInfoWindow) {
+        if(tipoPin=='bus'){
+            var indiceBusEnRecords=Ext.getStore('storeBusesUCR').findExact('idBus',identificador);
+            var stateBus=Ext.getStore('storeBusesUCR').getAt(indiceBusEnRecords).get('State');
+            if(stateBus===0){
+                var iconUrl='busGreen.png';
+            }
+            else if(stateBus===1){
+                var iconUrl='busBlue.png';
+            }
+            else if(stateBus==2){
+                var iconUrl='busRed.png';
+            }
+            else{
+                var iconUrl='busGreen.png';
+            }
+        }
+        else{
+            iconUrl=iconURL;
+        }
+
+
+
         var point = new google.maps.LatLng(lat,lng);
 
-        if(iconURL!==undefined){
-            var iconoPinParada=new google.maps.MarkerImage(iconURL,null,null,null,new google.maps.Size(35,35));
+        if(iconUrl!==undefined){
+            var iconoPinParada=new google.maps.MarkerImage(iconUrl,null,null,null,new google.maps.Size(35,35));
             var marker = new google.maps.Marker({
                 map: Ext.getCmp(idMap).getMap(),
                 position: point,
@@ -195,7 +251,10 @@ Ext.application({
                     Ext.getCmp('tabPanelPrincipal').getTabBar().setHidden(0);
                     //alert('esta es una parada con identificador: '+identificador);
                     Ext.getStore('storeDespliegueInfo').getProxy().setExtraParam('busstopname',identificador);
-                    Ext.getStore('storeDespliegueInfo').load();
+                    Ext.getStore('storeDespliegueInfo').load(function(records){
+                        Ext.getCmp('panelInfoDespuesClickear').setHtml('<b><p>&nbsp;</p><p>&nbsp;&nbsp;&nbsp;Parada seleccionada:</p><p>&nbsp;</p><center><p style="font-size:200%;">'+identificador+'</p></center></b>');
+                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>Bus {Name}</b>  &#9658;  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
+                    });
                 }
                 else{
                     infoWindow.setContent(stringInfoWindow);
@@ -215,7 +274,10 @@ Ext.application({
                     Ext.getCmp('tabPanelPrincipal').getTabBar().setHidden(0);
                     //alert('este es un bus con identificador: '+identificador);
                     Ext.getStore('storeDespliegueInfoBuses').getProxy().setExtraParam('idbus',identificador);
-                    Ext.getStore('storeDespliegueInfoBuses').load();
+                    Ext.getStore('storeDespliegueInfoBuses').load(function(){
+                        Ext.getCmp('panelInfoDespuesClickear').setHtml('<b><p>&nbsp;</p><p>&nbsp;&nbsp;&nbsp;Bus seleccionado:</p><p>&nbsp;</p><center><p style="font-size:200%;">'+identificador+'</p></center></b>');
+                        Ext.getCmp('listaDespliegueInfo').setItemTpl('<b>{Name}</b>  &#9658;  Distancia: {Distance} m &nbsp; - &nbsp;   Tiempo: {Time} min');
+                    });
                 }
             }
         });
@@ -243,12 +305,11 @@ Ext.application({
 
         Ext.getStore('storeBusesUCR').load(function(records){
             MyApp.app.load2DelStoreBusesUCR(records,target);
+            MyApp.app.refrescadoPinesDespliegueInfo(arrayMarkersDiplayInfo2,records);
         });
         Ext.getStore('storePinesParadas').load(function(records){
             MyApp.app.load2StorePinesParadas(records,target);
         });
-
-        MyApp.app.refrescadoPinesDespliegueInfo();
     },
 
     refrescadoPinesDespliegueInfo: function(arregloPines, records) {
@@ -260,7 +321,7 @@ Ext.application({
                 }
             });
             MyApp.app.refrescadoPinesDespliegueInfo();
-        },2500);
+        },1500);
     }
 
 });

@@ -34,6 +34,13 @@ Ext.define('MyApp.view.mapaDesplieguePines', {
             MyApp.app.loadStorePinesParadas(records);
         });
         MyApp.app.refrescadoPinesParadas();
+
+        //RUTAS
+        var ruta1= new google.maps.KmlLayer('http://faraday.eie.ucr.ac.cr/map/kml/route_1.kml');
+        var ruta2= new google.maps.KmlLayer('http://faraday.eie.ucr.ac.cr/map/kml/route_2.kml');
+
+        ruta1.setMap(Ext.getCmp('mapaDesplieguePines').getMap());
+        ruta2.setMap(Ext.getCmp('mapaDesplieguePines').getMap());
     }
 
 });
