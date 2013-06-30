@@ -50,12 +50,12 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "height": "40px",
+                        "height": "47px",
                         "html": "<img src=\"ucrLogo.png\" height=\"100%\" width=\"100%\" />",
                         "left": null,
                         "right": "2%",
                         "top": null,
-                        "width": "24%"
+                        "width": "45px"
                     },
                     "designerId": "adfd88f0-f002-4e19-9977-377b3a439bd0"
                 }

@@ -38,10 +38,10 @@ Ext.define('MyApp.view.containerDescripProyecto', {
                     },
                     {
                         xtype: 'container',
-                        height: '40px',
+                        height: '47px',
                         html: '<img src="ucrLogo.png" height="100%" width="100%" />',
                         right: '2%',
-                        width: '24%'
+                        width: '45px'
                     }
                 ]
             },
