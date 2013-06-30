@@ -48,7 +48,7 @@ Ext.define('MyApp.view.containerDescripProyecto', {
             {
                 xtype: 'panel',
                 height: '80%',
-                html: '<font color="gray"><center><p style="font-size: 150%;">Información general</p></center><p>&nbsp</p><p style="font-size:100%;"><p align="justify">Este proyecto surge como una iniciativa de la Escuela de Ingeniería Eléctrica de la Universidad de Costa Rica para ofrecer al usuario del transporte interno de la Sede Rodrigo Facio un servicio de geolocalización de buses en tiempo real.</p><p>&nbsp;</p><p>Los creadores son:</p><p>&nbsp;</p><p>Prototipo:</p><p> <b> André Govinda Stahl Leitón (stahlleiton@gmail.com)</b></p><p>&nbsp;</p><p>Aplicación:</p><p> <b>Gustavo Hidalgo Ramírez (tavroot@gmail.com)</b></p><p>&nbsp;</p><p>Profesor Guía:</p><p> <b>Ing. Fabián Abarca Calderón (fabian.abarca@eie.ucr.ac.cr)</b></p></p></font>',
+                html: '<font color="gray"><center><p style="font-size: 120%;">Información general</p></center><p>&nbsp</p><p style="font-size:100%;"><p>Este proyecto surge como una iniciativa de la Escuela de Ingeniería Eléctrica de la Universidad de Costa Rica para ofrecer al usuario del transporte interno de la Sede Rodrigo Facio un servicio de geolocalización de buses en tiempo real.</p><p>&nbsp;</p><p>Los creadores son:</p><p>&nbsp;</p><p>Prototipo:</p><p> <b> André Govinda Stahl Leitón (stahlleiton@gmail.com)</b></p><p>&nbsp;</p><p>Aplicación:</p><p> <b>Gustavo Hidalgo Ramírez (tavroot@gmail.com)</b></p><p>&nbsp;</p><p>Profesor Guía:</p><p> <b>Ing. Fabián Abarca Calderón (fabian.abarca@eie.ucr.ac.cr)</b></p></p></font>',
                 left: '10%',
                 top: '10%',
                 width: '80%',
