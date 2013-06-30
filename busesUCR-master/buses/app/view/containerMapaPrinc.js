@@ -38,7 +38,8 @@ Ext.define('MyApp.view.containerMapaPrinc', {
                             Ext.getCmp('mapaDesplieguePines').getMap().fitBounds(limitesPinesParadas);
                             Ext.getStore('storeBusesUCR').load();
                         },
-                        width: '20%',
+                        right: '3%',
+                        width: '18%',
                         iconCls: 'refresh'
                     }
                 ]

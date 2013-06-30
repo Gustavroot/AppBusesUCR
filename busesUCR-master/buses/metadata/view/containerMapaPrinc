@@ -34,7 +34,8 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "width": "20%",
+                        "right": "3%",
+                        "width": "18%",
                         "iconCls": "refresh",
                         "text": null
                     },
