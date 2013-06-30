@@ -41,23 +41,6 @@
                         "width": "20%"
                     },
                     "designerId": "29b568ca-4f01-4f43-9f04-e6c1da9f1d3a"
-                },
-                {
-                    "type": "Ext.Container",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": "47px",
-                        "html": "<img src=\"ucrLogo.png\" height=\"100%\" width=\"100%\" />",
-                        "left": null,
-                        "right": "2%",
-                        "top": null,
-                        "width": "45px"
-                    },
-                    "designerId": "adfd88f0-f002-4e19-9977-377b3a439bd0"
                 }
             ]
         },

@@ -75,7 +75,9 @@
             "userConfig": {
                 "fn": "onContainerMapaPrincInitialize",
                 "implHandler": [
-                    "this.setMasked({xtype: \"loadmask\", message: \"Espere por favor...\"});"
+                    "this.setMasked({xtype: \"loadmask\", message: \"Espere por favor...\"});",
+                    "",
+                    "Ext.Msg.alert('Bienvenid@', 'Sobre esta aplicación: La primera vista muestra de manera general las paradas y buses de la UCR, la segunda permite realizar una búsqueda de dos maneras distintas (por paradas o por buses) y la tercera es información general sobre este proyecto.', Ext.emptyFn);"
                 ],
                 "name": "initialize"
             },

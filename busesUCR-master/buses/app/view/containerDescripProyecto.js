@@ -35,13 +35,6 @@ Ext.define('MyApp.view.containerDescripProyecto', {
                         left: '2%',
                         top: '10%',
                         width: '20%'
-                    },
-                    {
-                        xtype: 'container',
-                        height: '47px',
-                        html: '<img src="ucrLogo.png" height="100%" width="100%" />',
-                        right: '2%',
-                        width: '45px'
                     }
                 ]
             },
