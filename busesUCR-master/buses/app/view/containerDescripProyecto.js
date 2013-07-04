@@ -26,17 +26,7 @@ Ext.define('MyApp.view.containerDescripProyecto', {
             {
                 xtype: 'toolbar',
                 docked: 'top',
-                title: 'Buses UCR',
-                items: [
-                    {
-                        xtype: 'container',
-                        height: '35px',
-                        html: '<img src="eieLogo.png" height="100%" width="100%" />',
-                        left: '2%',
-                        top: '10%',
-                        width: '20%'
-                    }
-                ]
+                title: 'Buses UCR'
             },
             {
                 xtype: 'panel',

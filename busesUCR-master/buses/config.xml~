@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns    = "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		    = "cr.busesucr.busesucr"
+	version 	= "1.0.1">
+
+	<name>BusesUCR</name>
+
+	<description>
+        App que permite saber no solo la ubicación del bus de la UCR, sino otra información de mucha utilidad.
+	</description>
+
+	<author href="" email="">
+		Anónimo
+	</author>
+		
+        <preference name="phonegap-version" value="2.5.0" />
+        <gap:splash src="./resources/splashscreenCliente.png" />
+
+        <gap:plugin>
+            <param name="SplashScreen" value="org.apache.cordova.SplashScreen" />
+        </gap:plugin>
+        <preference name="splash-screen-duration" value="15000" />
+        <preference name="auto-hide-splash-screen" value="false" />
+    	<icon src="./resources/icno_logo.png" width="36" height="36" />
+    	<access origin="*" />
+    	<preference name="permissions" value="none"/>
+</widget>

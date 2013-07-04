@@ -24,25 +24,7 @@
                 "docked": "top",
                 "title": "Buses UCR"
             },
-            "designerId": "5f6da045-e3a6-4b7c-aa23-bcc26b0a810c",
-            "cn": [
-                {
-                    "type": "Ext.Container",
-                    "reference": {
-                        "name": "items",
-                        "type": "array"
-                    },
-                    "codeClass": null,
-                    "userConfig": {
-                        "height": "35px",
-                        "html": "<img src=\"eieLogo.png\" height=\"100%\" width=\"100%\" />",
-                        "left": "2%",
-                        "top": "10%",
-                        "width": "20%"
-                    },
-                    "designerId": "29b568ca-4f01-4f43-9f04-e6c1da9f1d3a"
-                }
-            ]
+            "designerId": "5f6da045-e3a6-4b7c-aa23-bcc26b0a810c"
         },
         {
             "type": "Ext.Panel",
